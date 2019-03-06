@@ -7,13 +7,25 @@
 </head>
 <body>
   <h1>What movie?</h1>
-  <div class="inputSection">
-    <div class=:"inputs">
-      <input placeholder="something"></input>
-    </div>
-    <button class="addOption">add</button>
-  </div>
-  <button>Go!</button>
   <img src="movie.jpeg"alt height="150" width="150">
-</body>
+  <div class="inputSection">
+      <div class="inputs">
+        <input placeholder="Something"></input>
+      </div>
+      <button class="addOption">Add</button>
+    </div>
+    <div class="resultSection"></div>
+    <button>Go!</button>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      $(function() {
+        $('.resultSection').hide()
+        var add_option = function() {
+          $('.inputs').append('<input></input>')
+        }
+        $('.addOption').click(add_option)
+      })
+    </script>
+  </body>
 </html>
